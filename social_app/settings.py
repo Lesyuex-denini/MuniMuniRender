@@ -22,20 +22,21 @@ else:
 
 # Application definition
 INSTALLED_APPS = [
+    #'django.contrib.sites',  # Required for allauth
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  
+    'django.contrib.postgres',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
     'accounts',
-    'django.contrib.postgres',
+    
 ]
 
 MIDDLEWARE = [

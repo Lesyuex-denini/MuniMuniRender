@@ -198,45 +198,20 @@
     <div class="signup-container">
       <div class="signup-content">
         <h2>Create Your Account</h2>
-
         <form method="POST" class="signup-form" action="{% url 'signup' %}">
           {% csrf_token %}
-
+          {% for field in form %}
           <div style="margin-bottom: 0.8rem;">
-            <label for="id_email">Email Address:</label>
-            <input type="email" name="email" id="id_email" required>
-            {% for error in form.email.errors %}
+            {{ field.label_tag }}
+            {{ field }}
+            {% for error in field.errors %}
             <div class="error" style="color: red; font-size: 0.9rem; margin-top: 0.2rem;">{{ error }}</div>
             {% endfor %}
           </div>
-
-          <div style="margin-bottom: 0.8rem;">
-            <label for="id_username">Username:</label>
-            <input type="text" name="username" id="id_username" required>
-            {% for error in form.username.errors %}
-            <div class="error" style="color: red; font-size: 0.9rem; margin-top: 0.2rem;">{{ error }}</div>
-            {% endfor %}
-          </div>
-
-          <div style="margin-bottom: 0.8rem;">
-            <label for="id_password1">Password:</label>
-            <input type="password" name="password1" id="id_password1" required>
-            {% for error in form.password1.errors %}
-            <div class="error" style="color: red; font-size: 0.9rem; margin-top: 0.2rem;">{{ error }}</div>
-            {% endfor %}
-          </div>
-
-          <div style="margin-bottom: 0.8rem;">
-            <label for="id_password2">Confirm Password:</label>
-            <input type="password" name="password2" id="id_password2" required>
-            {% for error in form.password2.errors %}
-            <div class="error" style="color: red; font-size: 0.9rem; margin-top: 0.2rem;">{{ error }}</div>
-            {% endfor %}
-          </div>
+          {% endfor %}
 
           <button type="submit">Sign Up</button>
         </form>
-
 
         <div class="divider">or sign up with</div>
         <div class="social-login">
