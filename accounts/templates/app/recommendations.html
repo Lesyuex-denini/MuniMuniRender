@@ -1,0 +1,374 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Recommendations{% endblock %}
+
+{% block content %}
+<style>
+  :root {
+    --primary: #f38b8a;
+    --secondary: #f9f7e2;
+    --accent: #e4e1b5;
+    --font: "Segoe UI", sans-serif;
+  }
+
+  body {
+    font-family: var(--font);
+    background: linear-gradient(to right, var(--secondary), var(--bg));
+    background-image: url("{% static 'css/images/dilawbg.jpg' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+
+  p {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  .recommendation {
+    background: var(--bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.2s ease;
+  }
+
+  .recommendation:hover {
+    transform: scale(1.02);
+  }
+
+  .recommendation h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  .recommendation p {
+    margin: 10px 0;
+    color: #444;
+  }
+
+  .why {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 12px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .actions button:hover {
+    background-color: #5848e5;
+  }
+
+  form {
+    display: inline;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--primary);
+    color: white;
+    border-bottom-right-radius: 12px;
+  }
+
+  .sidebar {
+    width: 250px;
+    background: var(--secondary);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    padding-top: 150px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar nav ul li {
+    margin: 1rem 0;
+  }
+
+  .sidebar nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    display: block;
+    transition: 0.2s;
+  }
+
+  .sidebar nav ul li a:hover {
+    background: var(--accent);
+    border-radius: 8px;
+  }
+
+  /* AI Recommendation Section */
+  .ai-recommendation-section {
+    background-color: var(--secondary);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+
+  .ai-recommendation-section h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .ai-recommendation-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: bold;
+  }
+
+  .ai-recommendation-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .ai-recommendation-form button {
+    padding: 0.8rem 1.6rem;
+    background-color: var(--accent);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .ai-recommendation-form button:hover {
+    background-color: #e0bdbd;
+  }
+
+  .ai-recommendation-display {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+  }
+
+  .ai-recommendation-display h3 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+
+  .ai-recommendation-display p {
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+  }
+
+  .ai-recommendation-display .why {
+    font-style: italic;
+    color: #777;
+  }
+
+  .logout-btn {
+    background-color: #f38b8a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logout-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+  }
+
+  .logout-btn:focus {
+    outline: none;
+  }
+
+  .get-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: var(--secondary);
+  }
+
+  .get-select:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  .get-select option:hover,
+  .get-select option:checked {
+    background-color: #f38b8a;
+    color: black;
+  }
+
+  .logo-placeholder {
+    width: 100px;
+    height: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+</style>
+
+<div class="sidebar" id="sidebar">
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'recommendations' %}">Recommendations</a></li>
+      <li><a href="{% url 'articles' %}">Mindful Reads</a></li>
+      <li><a href="{% url 'profile' %}">Profile</a></li>
+      <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" class="logout-btn">Logout</button>
+      </form>
+    </ul>
+
+    <ul>
+      {% if not user.is_authenticated %}
+      <li><a href="{% url 'account_login' %}">Login</a></li>
+      <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+      {% else %} {% endif %}
+    </ul>
+  </nav>
+</div>
+
+<div class="logo-placeholder">MuniMuni</div>
+
+<div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+<h1>Recommendation <span class="emoji">⊹₊ ݁.</span></h1>
+<br>
+<form method="get">
+  {{ filter_form }}
+</form>
+
+<br>
+<hr><br>
+
+<section class="ai-recommendation-section">
+  <h2>Get an AI-Powered Recommendation</h2>
+  <form method="post" class="ai-recommendation-form">
+    {% csrf_token %}
+    <label for="ai_input">How are you feeling or what do you need?</label><br>
+    <textarea id="ai_input" name="ai_input" rows="4" cols="50"></textarea><br><br>
+    <button type="submit">Get Recommendation</button>
+  </form>
+
+  {% if ai_recommendation %}
+  <div class="ai-recommendation-display">
+    <h3>{{ ai_recommendation.recommendation.title }}</h3>
+    <p>{{ ai_recommendation.recommendation.description }}</p>
+    <div class="why">Why? {{ ai_recommendation.recommendation.reason }}</div>
+    <div class="actions">
+      <form method="post" action="{% url 'like_ai_recommendation' ai_recommendation.recommendation.id %}">
+        {% csrf_token %}
+        <button type="submit">{% if ai_recommendation.liked %}Unlike{% else %}Like{% endif %}</button>
+      </form>
+      <form method="post" action="{% url 'mark_done_ai_recommendation' ai_recommendation.recommendation.id %}">
+        {% csrf_token %}
+        <button type="submit">{% if ai_recommendation.done %}Undone{% else %}Mark as Done{% endif %}</button>
+      </form>
+      <form method="post" action="{% url 'save_ai_recommendation' ai_recommendation.recommendation.id %}">
+        {% csrf_token %}
+        <button type="submit">{% if ai_recommendation.saved %}Unsave{% else %}Save{% endif %}</button>
+      </form>
+    </div>
+  </div>
+  {% endif %}
+</section>
+
+<br>
+
+{% for item in recommendations %}
+<div class="recommendation">
+  <h3>{{ item.recommendation.title }}</h3>
+  <p>{{ item.recommendation.description }}</p>
+  {% if item.recommendation.reason %}
+  <div class="why">Why? {{ item.recommendation.reason }}</div>
+  {% endif %}
+  <div class="actions">
+    <form method="post" action="{% url 'like_recommendation' item.recommendation.id %}">
+      {% csrf_token %}
+      <button type="submit">{% if item.liked %}Unlike{% else %}Like{% endif %}</button>
+    </form>
+    <form method="post" action="{% url 'mark_done_recommendation' item.recommendation.id %}">
+      {% csrf_token %}
+      <button type="submit">{% if item.done %}Undone{% else %}Mark as Done{% endif %}</button>
+    </form>
+    <form method="post" action="{% url 'save_recommendation' item.recommendation.id %}">
+      {% csrf_token %}
+      <button type="submit">{% if item.saved %}Unsave{% else %}Save{% endif %}</button>
+    </form>
+  </div>
+</div>
+{% empty %}
+{% endfor %}
+
+<br>
+<div>
+  <a href="{% url 'saved_recommendations' %}">📂 Saved Recommendations</a>
+</div>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  }
+</script>
+{% endblock %}

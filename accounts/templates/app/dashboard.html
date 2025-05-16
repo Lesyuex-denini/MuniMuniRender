@@ -1,0 +1,298 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuniMuni - A Soft Space for You</title>
+  <style>
+    :root {
+      --primary: #f38b8a;
+      --secondary: #f9f7e2;
+      --accent: #a8dadc;
+      --font-main: "Segoe UI", sans-serif;
+      --font-cursive: cursive;
+      --text-dark: #333;
+      --text-light: #777;
+      --bg: #fdfdfd;
+      --button-primary: #f38b8a;
+      --button-secondary: #a8dadc;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+      --shadow-medium: rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: linear-gradient(to bottom right, var(--secondary) 0%, var(--bg) 100%);
+      background-image: url("{% static 'css/images/dilawbg.jpg' %}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    /* --- Hero Section --- */
+    .hero-container {
+      background: linear-gradient(to bottom right, var(--secondary) 0%, var(--bg) 100%);
+      background-image: url("{% static 'css/images/selfcarelog.gif' %}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px var(--shadow-light);
+      padding: 60px 80px;
+      max-width: 1000px;
+      width: 90%;
+      margin-top: 80px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .logo-placeholder {
+      width: 100px;
+      height: 50px;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+
+    .hero-title {
+      font-family: var(--font-main);
+      font-size: 6rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-cursive);
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .auth-button {
+      padding: 8px 32px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+      box-shadow: 0 4px 8px var(--shadow-light);
+    }
+
+    .login-button {
+      background-color: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .signup-button {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .auth-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px var(--shadow-medium);
+    }
+
+    /* --- About MuniMuni Section --- */
+    .aboutmunimuni {
+      background-color: rgba(var(--primary-rgb, 243, 139, 138), 0.08);
+      border-radius: 16px;
+      padding: 60px 80px;
+      max-width: 1000px;
+      width: 90%;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .aboutmunimuni h2 {
+      font-size: 3rem;
+      color: #f38b8a;
+      margin-bottom: 30px;
+    }
+
+    .aboutmunimuni p {
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .aboutmunimuni .feature-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .aboutmunimuni .feature-item {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .aboutmunimuni .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    /* --- Meet Our Team Section --- */
+    .aboutteam {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px var(--shadow-light);
+      padding: 60px 80px;
+      max-width: 1000px;
+      width: 90%;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    .aboutteam h2 {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 40px;
+    }
+
+    .team-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px var(--shadow-light);
+    }
+
+    .team-member h4 {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .team-member p {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .hero-image-placeholder {
+      flex: 1;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px var(--shadow-medium);
+      max-width: 450px;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-image-placeholder img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero-container">
+    <div class="logo-placeholder">MuniMuni</div>
+    <h1 class="hero-title">MuniMuni</h1>
+    <p class="hero-subtitle">A soft space to process your day, feelings, and insights.</p>
+    <div class="auth-buttons">
+      <a href="{% url 'login' %}" class="auth-button login-button">Log In</a>
+      <a href="{% url 'signup' %}" class="auth-button signup-button">Sign Up</a>
+    </div>
+  </div>
+
+  <div class="aboutmunimuni">
+    <h2>What is MuniMuni? ೀ</h2>
+    <p>
+      Welcome to your gentle corner of the internet. MuniMuni is designed as a supportive space to help you navigate
+      your day, understand your feelings, and nurture your inner world. We believe that taking care of your mental
+      well-being is a beautiful journey, and we're here to walk alongside you.
+      <br><br>
+      Explore our resources for mindful reflection, discover uplifting content, and connect with a community that values
+      self-care as much as you do. Let MuniMuni be your daily dose of tranquility and inspiration. 🌸
+    </p>
+    <ul class="feature-list">
+      <li class="feature-item">
+        <span class="feature-icon">🧘‍♀️</span>
+        <h3>Mindful Moments</h3>
+        <p>Guided reflections and prompts to center your thoughts.</p>
+      </li>
+      <li class="feature-item">
+        <span class="feature-icon">📖</span>
+        <h3>Uplifting Reads</h3>
+        <p>Articles and stories focused on positivity and self-compassion.</p>
+      </li>
+      <li class="feature-item">
+        <span class="feature-icon">🫂</span>
+        <h3>Supportive Community</h3>
+        <p>Connect with others on a similar journey of self-discovery.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="aboutteam">
+    <h2>Meet the Heart of MuniMuni༄˖°</h2>
+    <div class="team-section">
+      <div class="team-member">
+        <img src="{% static 'css/images/mila.jpg' %}" alt="Mila Abadinas">
+        <h4>Mila Abadinas</h4>
+        <p>Vision Keeper ✨</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'css/images/ruby.jpg' %}" alt="Ruby Amate">
+        <h4>Ruby Amate</h4>
+        <p>UX Advocate ✍️</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'css/images/ingrid.jpg' %}" alt="Ingrid Corpuz">
+        <h4>Ingrid Corpuz</h4>
+        <p>Content Crafter🧶</p>
+      </div>
+      <div class="team-member">
+        <img src="{% static 'css/images/katelyn.jpg' %}" alt="Katelyn Ebuiza">
+        <h4>Katelyn Ebuiza</h4>
+        <p>Design Alchemist 💻</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

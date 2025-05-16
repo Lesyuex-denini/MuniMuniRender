@@ -1,0 +1,244 @@
+{% load static %}
+{% block content %}
+{% with hide_sidebar=True %}
+{% load socialaccount %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGIN</title>
+  <style>
+    :root {
+      --primary: #f38b8a;
+      --secondary: #f9f7e2;
+      --accent: #e4e1b5;
+      --font: "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background: no-repeat center center fixed;
+      background-size: cover;
+      background-image: url("{% static 'css/images/loginbg.png' %}");
+      color: var(--primary);
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: var(--bg);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .welcome-back {
+      position: fixed;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+      z-index: 1000;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: space-between;
+      background: var(--secondary);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .login-content {
+      width: 60%;
+    }
+
+    .login-container h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--primary);
+      font-size: 1rem;
+      background: #fff;
+    }
+
+    .login-form button {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 0.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background: #e27c75;
+    }
+
+    .login-logo {
+      width: 35%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-right: 60px;
+      transform: translateY(-20px);
+    }
+
+    .login-logo img {
+      width: 200%;
+      max-width: 300px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .error-messages {
+      color: red;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .divider {
+      text-align: center;
+      color: var(--primary);
+      margin: 0.5rem 0 0.5rem;
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 35%;
+      height: 1px;
+      background: var(--primary);
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-login img {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .social-login img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">
+    <strong></strong>
+  </div>
+  <section class="hero">
+    <div class="welcome-back">Welcome Back!</div>
+    <div class="login-container">
+      <div class="login-content">
+        <h2>Login to Your Account</h2>
+
+        {% if form.errors %}
+        <div class="error-messages">
+          <ul>
+            {% for field in form %} {% for error in field.errors %}
+            <li>{{ error }}</li>
+            {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <form class="login-form" method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{{ next }}" />
+          <input type="text" name="email" placeholder="Username or Email" required
+            value="{{ form.login.value|default:'' }}" />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+
+        <div class="divider">or login with</div>
+        <div class="social-login">
+          <a href="{% provider_login_url 'google' %}">
+            <img src="{% static 'css/images/google.png' %}" alt="Google" />
+          </a>
+          <a href="{% provider_login_url 'github' %}">
+            <img src="{% static 'css/images/github.png' %}" alt="GitHub" />
+          </a>
+        </div>
+
+        <p style="text-align: center; margin-top: 1rem">
+          Don't have an account?
+          <a href="{% url 'account_signup' %}" style="color: var(--primary)">
+            Register
+          </a>
+        </p>
+      </div>
+      <div class="login-logo">
+        <img src="{% static 'css/images/forLoginSignUp.png' %}" alt="Logo" />
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+
+{% endwith %} {% endblock %}

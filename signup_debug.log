@@ -1,0 +1,70 @@
+2025-05-12 07:53:44,816 - accounts.views - INFO - Is form valid? False
+2025-05-12 07:53:44,816 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 07:53:44,817 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 07:57:19,795 - accounts.views - INFO - Is form valid? False
+2025-05-12 07:57:19,796 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 07:57:19,797 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 07:57:58,954 - accounts.views - INFO - Is form valid? True
+2025-05-12 07:57:58,954 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:00:04,558 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:00:04,558 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:00:04,559 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:00:29,575 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:00:29,575 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:03:23,302 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:03:23,302 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:03:23,303 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:06:16,129 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:06:16,129 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:11:19,409 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:11:19,410 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:11:19,410 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:11:34,662 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:11:34,663 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:16:25,511 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:16:25,511 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:16:25,512 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:18:30,272 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:18:30,273 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:24:26,788 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:24:26,789 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:24:26,789 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:25:11,517 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:25:11,518 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:25:11,518 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:25:39,481 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:25:39,481 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:25:39,482 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>Passwords do not match.</li></ul>
+2025-05-12 08:25:55,867 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:25:55,867 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:25:55,867 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>Passwords do not match.</li></ul>
+2025-05-12 08:26:09,848 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:26:09,848 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:26:09,848 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>Passwords do not match.</li></ul>
+2025-05-12 08:26:21,074 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:26:21,075 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:26:21,076 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>Passwords do not match.</li></ul>
+2025-05-12 08:27:58,122 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:27:58,123 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:27:58,124 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:28:35,545 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:28:35,545 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:35:52,975 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:35:52,976 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:35:52,976 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:36:20,011 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:36:20,011 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-12 08:50:37,929 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:50:37,930 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:50:37,931 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:51:14,493 - accounts.views - INFO - Is form valid? False
+2025-05-12 08:51:14,493 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-12 08:51:14,494 - accounts.views - INFO - Field: password, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-12 08:51:38,665 - accounts.views - INFO - Is form valid? True
+2025-05-12 08:51:38,666 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-13 15:11:50,967 - accounts.views - INFO - Is form valid? True
+2025-05-13 15:11:50,969 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-13 15:14:42,360 - accounts.views - INFO - Is form valid? True
+2025-05-13 15:14:42,362 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-13 17:30:44,880 - accounts.views - INFO - Is form valid? True
+2025-05-13 17:30:44,881 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.

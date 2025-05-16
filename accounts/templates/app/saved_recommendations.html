@@ -1,0 +1,63 @@
+{% extends '_base.html' %}
+
+{% block title %}Saved Recommendations{% endblock %}
+
+{% block content %}
+<style>
+    .saved-recommendation {
+        background: var(--bg);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+    }
+
+    .saved-recommendation h3 {
+        color: #DEAA79;
+        margin-top: 0;
+    }
+
+    .saved-recommendation p {
+        color: #444;
+        margin: 10px 0;
+    }
+
+    .unsave-button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #dc3545;
+        color: white;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .unsave-button:hover {
+        background-color: #c82333;
+    }
+</style>
+
+<h1>Saved Recommendations</h1>
+
+{% if saved_recommendations %}
+{% for item in saved_recommendations %}
+<div class="saved-recommendation">
+    <h3>{{ item.recommendation.title }}</h3>
+    <p>{{ item.recommendation.description }}</p>
+    {% if item.recommendation.reason %}
+    <div class="why">Why? {{ item.recommendation.reason }}</div>
+    {% endif %}
+    <form method="post" action="{% url 'save_recommendation' item.recommendation.id %}">
+        {% csrf_token %}
+        <button type="submit" class="unsave-button">Unsave</button>
+    </form>
+</div>
+{% endfor %}
+{% else %}
+<p>You haven't saved any recommendations yet.</p>
+{% endif %}
+
+{% endblock %}

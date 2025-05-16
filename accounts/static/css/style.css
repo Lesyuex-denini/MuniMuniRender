@@ -1,0 +1,102 @@
+:root {
+    --primary: #f38b8a;
+    --secondary: #f9f7e2;
+    --accent: #e4e1b5;
+    --bg: #fff8f5;
+    --font: "Segoe UI", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    background-color: var(--bg);
+    color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    padding-left: 3rem;
+}
+
+
+.hamburger {
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--primary);
+    color: white;
+    border-bottom-right-radius: 12px;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--secondary);
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    padding-top: 60px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 1rem 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar nav ul li a:hover {
+    background: var(--accent);
+    border-radius: 8px;
+}
+
+.logout-btn {
+    background-color: #f38b8a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+.logout-btn:focus {
+    outline: none;
+}
