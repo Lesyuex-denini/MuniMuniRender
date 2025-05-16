@@ -7,7 +7,6 @@ from .models import Recommendation, UserRecommendation, PlannerItem, Profile
 from .forms import RecommendationFilterForm, AddToPlannerForm, CustomUserCreationForm 
 from .utils import generate_personalized_recommendations, generate_ai_recommendation
 from datetime import datetime
-from django.contrib.auth import login
 import logging
 
 # Get a logger instance
@@ -42,6 +41,7 @@ def login_view(request):
 
 # Signup Page
 def signup_view(request):
+    form = CustomUserCreationForm()
     if request.method == 'POST':
         print("POST request received in signup_view")  
         form = CustomUserCreationForm(request.POST)
@@ -60,7 +60,7 @@ def signup_view(request):
                 for msg in error:
                     messages.error(request, msg)
     else:
-        form = CustomUserCreationForm()
+        print("Form fields:", form.fields.keys())
     return render(request, 'account/signup.html', {'form': form})
 
 # Dashboard

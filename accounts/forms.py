@@ -14,9 +14,9 @@ class RecommendationFilterForm(forms.Form):
             ('stress_relief', 'Stress Relief'),
             ('sleep', 'Sleep'),
             ('focus', 'Focus'),
-            ('anxiety_relief', 'Anxiety Relief'),    # Added category
-            ('motivation', 'Motivation'),          # Added category
-            ('mindfulness', 'Mindfulness'),         # Added category
+            ('anxiety_relief', 'Anxiety Relief'),    
+            ('motivation', 'Motivation'),          
+            ('mindfulness', 'Mindfulness'),       
         ],
         initial='all',
         required=False,
@@ -54,6 +54,10 @@ class CustomUserCreationForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields['email'].label = "Email Address"
         self.fields['username'].label = "Username"
+        self.fields['password1'].label = "Password"
+        self.fields['password2'].label = "Confirm Password"
+        
+
 
     def clean_email(self):
         email = self.cleaned_data.get('email')

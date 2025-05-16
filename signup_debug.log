@@ -68,3 +68,248 @@
 2025-05-13 15:14:42,362 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
 2025-05-13 17:30:44,880 - accounts.views - INFO - Is form valid? True
 2025-05-13 17:30:44,881 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-16 09:15:00,144 - accounts.views - INFO - Is form valid? False
+2025-05-16 09:15:00,146 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-16 09:15:00,180 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 09:15:00,180 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 09:32:17,470 - accounts.views - INFO - Is form valid? False
+2025-05-16 09:32:17,471 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-16 09:32:17,475 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 09:32:17,475 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 09:32:39,244 - accounts.views - INFO - Is form valid? True
+2025-05-16 09:32:39,244 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+2025-05-16 15:02:23,405 - accounts.views - INFO - Is form valid? False
+2025-05-16 15:02:23,406 - accounts.views - INFO - Form is NOT valid - printing errors:
+2025-05-16 15:02:23,427 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:02:23,427 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Watching for file changes with StatReloader
+C:\Users\Fam\selfcareproj\selfcareproj\social_app\social_app\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:19:30,193 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:19:30,193 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:19:30,194 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:19:30,195 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:20:13,967 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:20:13,967 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:20:13,968 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:20:13,968 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:22:11,156 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:22:11,156 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:22:11,157 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:22:11,157 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:26:01,051 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:26:01,051 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:26:01,051 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:01,051 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:01,051 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:01,051 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:24,159 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:26:24,159 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:26:24,159 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:24,159 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:24,160 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:26:24,160 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+C:\Users\Fam\selfcareproj\selfcareproj\social_app\accounts\urls.py changed, reloading.
+Watching for file changes with StatReloader
+2025-05-16 15:32:13,113 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:32:13,113 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:32:13,119 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:13,120 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:13,120 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:13,120 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:24,334 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:32:24,334 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:32:24,334 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:24,334 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:24,334 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:24,335 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:44,064 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:32:44,064 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:32:44,064 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:44,064 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:44,065 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:32:44,068 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /favicon.ico
+2025-05-16 15:33:04,513 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:33:04,513 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:33:04,513 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:04,513 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:04,513 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:04,513 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:29,524 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:33:29,524 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:33:29,524 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:29,524 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:29,525 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:33:29,525 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:35:09,440 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:35:09,440 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:35:09,441 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:35:09,441 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:35:09,441 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:35:09,441 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+C:\Users\Fam\selfcareproj\selfcareproj\social_app\social_app\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\Fam\selfcareproj\selfcareproj\social_app\accounts\views.py changed, reloading.
+Watching for file changes with StatReloader
+2025-05-16 15:43:51,798 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:43:51,799 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:43:51,801 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:43:51,801 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:43:51,802 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:43:51,802 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:44:18,858 - accounts.views - INFO - Is form valid? True
+Is form valid? True
+2025-05-16 15:44:18,858 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+Form is valid - proceeding with signup and redirect.
+2025-05-16 15:44:43,366 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:44:43,366 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:44:43,366 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:44:43,366 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:44:43,367 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:44:43,367 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-16 15:55:23,787 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:55:23,789 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:55:23,791 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:23,791 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:23,791 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:23,791 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:48,151 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:55:48,151 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:55:48,151 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:48,151 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:48,152 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:55:48,153 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:05,257 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:58:05,257 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:58:05,257 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:05,257 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:05,258 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:05,258 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:16,798 - accounts.views - INFO - Is form valid? False
+Is form valid? False
+2025-05-16 15:58:16,798 - accounts.views - INFO - Form is NOT valid - printing errors:
+Form is NOT valid - printing errors:
+2025-05-16 15:58:16,798 - accounts.views - INFO - Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: email, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:16,798 - accounts.views - INFO - Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: username, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:16,799 - accounts.views - INFO - Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password1, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+2025-05-16 15:58:16,799 - accounts.views - INFO - Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Field: password2, Errors: <ul class="errorlist"><li>This field is required.</li></ul>
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /favicon.ico
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /favicon.ico
+Watching for file changes with StatReloader
+2025-05-16 16:06:48,427 - accounts.views - INFO - Is form valid? True
+Is form valid? True
+2025-05-16 16:06:48,427 - accounts.views - INFO - Form is valid - proceeding with signup and redirect.
+Form is valid - proceeding with signup and redirect.
+Watching for file changes with StatReloader
+Not Found: /favicon.ico

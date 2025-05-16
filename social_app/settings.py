@@ -92,7 +92,7 @@ else:
     DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
 
 # Allauth settings
-ACCOUNT_LOGIN_METHODS = ("email",)
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_SIGNUP_FIELDS = ["email", "username"]
 ACCOUNT_EMAIL_VERIFICATION = "none"
 ACCOUNT_SIGNUP_REDIRECT_URL = "/profile/"
@@ -139,7 +139,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "accounts/static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
@@ -154,7 +154,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-LLOGGING = {
+LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "handlers": {
