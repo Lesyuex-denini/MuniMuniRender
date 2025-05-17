@@ -100,6 +100,9 @@ ACCOUNT_SIGNUP_REDIRECT_URL = '/profile/'
 ACCOUNT_AUTHENTICATED_REDIRECT_URL = '/'
 ACCOUNT_PROFILE_URL = '/profile/'
 
+# Redirect after successful social login/signup
+SOCIALACCOUNT_LOGIN_REDIRECT_URL = '/profile/'
+
 # GitHub and Google OAuth configuration
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
@@ -108,7 +111,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': os.getenv('GITHUB_CLIENT_SECRET'),
         },
         'AUTH_PARAMS': {
-            'prompt': 'select_account'  # Forces GitHub to ask for account selection each time
+            'prompt': 'select_account'  
         }
     },
     'google': {
@@ -117,7 +120,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
         },
         'AUTH_PARAMS': {
-            'prompt': 'select_account'  # Forces Google to ask for account selection each time
+            'prompt': 'select_account'  
         }
     }
 }
@@ -125,10 +128,9 @@ SOCIALACCOUNT_PROVIDERS = {
 # Authentication backends
 AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
-    'django.contrib.auth.backends.ModelBackend',  # Default fallback backend
+    'django.contrib.auth.backends.ModelBackend',  
 )
 
-# Password validation settings (still active but does not relate to password reset)
 AUTH_PASSWORD_VALIDATORS = [
 
 ]
@@ -146,7 +148,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-LOGIN_REDIRECT_URL = '/' 
+LOGIN_REDIRECT_URL = '/home' 
 LOGOUT_REDIRECT_URL = 'login' 
 
 # Email settings (for testing only, using console email backend)

@@ -235,6 +235,7 @@ def profile_view(request):
 
 
 # Home Page View
+@login_required
 def home(request):
     return render(request, 'accounts/home.html', {'user': request.user})
 
@@ -294,7 +295,7 @@ def add_to_planner_view(request, recommendation_id):
     context = {'recommendation': recommendation, 'form': form}
     return render(request, 'app/add_to_planner.html', context)
 
-
+@login_required
 def home_view(request):
     return render(request, 'accounts/home.html', {'user': request.user})
 
@@ -305,5 +306,6 @@ def logout_view(request):
     logout(request)
     return redirect('account_login')
 
+@login_required
 def root_view(request):
     return redirect('home')
